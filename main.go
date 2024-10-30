@@ -5,7 +5,6 @@ import (
 	"os"
 )
 
-// Usage: your_program.sh <command> <arg1> <arg2> ...
 func main() {
 
 	if len(os.Args) < 2 {
@@ -15,7 +14,6 @@ func main() {
 
 	switch command := os.Args[1]; command {
 	case "init":
-		// Uncomment this block to pass the first stage!
 
 		for _, dir := range []string{".mygit", ".mygit/objects", ".mygit/refs"} {
 			if err := os.MkdirAll(dir, 0755); err != nil {
